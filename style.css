@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    width: 90%;
+    height: 65%;
+    max-width: 610px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.gallery {
+    flex-basis: 47%;
+    background: rgb(41, 40, 40);
+    padding-top: 67px;
+    height: 100%;
+    transform: scale(1.1);
+    overflow: hidden;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.content {
+    flex-basis: 53%;
+    background: white;
+    height: 100%;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 16px 20px 15px 41px;
+}
+
+.content h2 {
+    color: #646161;
+}
+
+.content h3 {
+    color: #07b107;
+    font-size: 16px;
+}
+
+.content .description {
+    font-size: 12px;
+    color: gray;
+    margin: 15px 0px 38px;
+}
+
+form .size,
+form .color {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: gray;
+}
+
+form .size p,
+form .color p {
+    width: 55px;
+}
+
+form .size label,
+form .color label {
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+form .size label input:checked+span {
+    color: blue;
+    transform: scale(1.1);
+    font-weight: 600;
+}
+
+form .size label input {
+    display: none;
+}
+
+form .color {
+    margin-top: 12px;
+}
+
+form .color span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+form .color label input {
+    display: none;
+}
+
+.red {
+    background: red;
+}
+
+.green {
+    background: #07b107;
+}
+
+.pink {
+    background: pink;
+}
+
+.blue {
+    background: blue;
+}
+
+form .color label input:checked+span {
+    transform: scale(0.7);
+    box-shadow: 0px 0px 0px 3px white, 0px 0px 0px 5px black;
+}
+
+form .qty-select {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 13px 0px;
+    color: gray;
+}
+
+form .qty-select p {
+    width: 70px;
+}
+
+form .qty-select input {
+    border: none;
+    outline: none;
+    background: gainsboro;
+    text-align: center;
+    width: 65px;
+    border-radius: 18px;
+}
+
+.content button {
+    width: 100%;
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px;
+    background: #4141f1;
+    border-radius: 32px;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.controls {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+
+.btn {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn.active {
+    background: #553ff0;
+}
+
+@media screen and (max-width: 768px) {
+
+    form .size,
+    form .color {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 14px;
+        color: gray;
+
+    }
+
+    .product {
+        width: 90%;
+        height: 65%;
+        max-width: 610px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 5px;
+    }
+
+
+    .gallery {
+        flex-basis: 100%;
+        background: rgb(41, 40, 40);
+        padding-top: 67px;
+        transform: scale(1.1);
+        overflow: hidden;
+        box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+
+    .content {
+        flex-basis: 100%;
+        background: white;
+        box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+        padding: 16px 20px 15px 41px;
+    }
+
+    .product {
+        height: auto;
+    }
+
+    .gallery {
+        padding: 33px 0px 0px 16px;
+        transform: none;
+    }
+
+    .gallery img {
+        width: 80%;
+    }
+
+    .content {
+        padding: 16px;
+    }
+}
